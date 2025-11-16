@@ -15,8 +15,14 @@ files = [
     "sp500_btc.csv",
     "silver_btc.csv",
     "copper_btc.csv",
-    "natgas_btc.csv"
+    "gas_btc.csv",
+    "mstr_btc.csv",
+    "gme_btc.csv",
+    "mara_btc.csv",
+    "naka_btc.csv",
+    "smlr_btc.csv"
 ]
+
 
 
 for filename in files:

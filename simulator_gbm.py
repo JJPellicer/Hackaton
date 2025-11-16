@@ -47,7 +47,7 @@ def generate_future_projection(asset_name, input_path, output_dir="data_future",
     df_future = simulate_gbm(series)
 
     os.makedirs(output_dir, exist_ok=True)
-    output_path = os.path.join(output_dir, f"{asset_name}_future.csv")
+    output_path = os.path.join(output_dir, f"{asset_name}_btc_future.csv")
     df_future.to_csv(output_path)
     print(f"[OK] {asset_name} → futuro guardado en {output_path}")
 
@@ -93,7 +93,7 @@ def plot_future_only(asset_name, future_df):
 
 if __name__ == "__main__":
     # Solo usa los archivos que tú ya tienes y sabes que funcionan
-    assets = {
+    assets = { 
     "gold": "data_btc/gold_btc.csv",
     "sp500": "data_btc/sp500_btc.csv",
     "oil": "data_btc/oil_btc.csv",
@@ -101,13 +101,21 @@ if __name__ == "__main__":
     "cpi": "data_btc/cpi_btc.csv",
     "silver": "data_btc/silver_btc.csv",
     "copper": "data_btc/copper_btc.csv",
-    "natgas": "data_btc/natgas_btc.csv"
+    "natgas": "data_btc/gas_btc.csv",
+
+    # Companies with BTC in treasury
+    "mstr": "data_btc/mstr_btc.csv",
+    "gme": "data_btc/gme_btc.csv",
+    "mara": "data_btc/mara_btc.csv",
+    "naka": "data_btc/naka_btc.csv",
+    "smlr": "data_btc/smlr_btc.csv"
 }
+
 
 
 
     for asset, path in assets.items():
         generate_future_projection(asset, path, plot=True)  # Set plot=False to skip plotting
-        future_path = f"data_future/{asset}_future.csv"
+        future_path = f"data_future/{asset}_btc_future.csv"
         df_future = pd.read_csv(future_path, index_col=0, parse_dates=True)
         plot_future_only(asset, df_future)

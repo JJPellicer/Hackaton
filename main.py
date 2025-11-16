@@ -9,14 +9,24 @@ DATA_DIR = "data"
 os.makedirs(DATA_DIR, exist_ok=True)
 
 TICKERS = {
+    # Criptomoneda base
     "BTC": {"ticker": "BTC-USD", "filename": "btc.csv"},
+
+    # Índices y Commodities
     "SP500": {"ticker": "^GSPC", "filename": "sp500.csv"},
+    "US100": {"ticker": "^NDX", "filename": "us100.csv"},
     "GOLD": {"ticker": "GC=F", "filename": "gold.csv"},
     "OIL": {"ticker": "CL=F", "filename": "oil.csv"},
-    "US100": {"ticker": "^NDX", "filename": "us100.csv"},
     "SILVER": {"ticker": "SI=F", "filename": "silver.csv"},
     "COPPER": {"ticker": "HG=F", "filename": "copper.csv"},
-    "NATGAS": {"ticker": "NG=F", "filename": "natgas.csv"},
+    "GAS": {"ticker": "NG=F", "filename": "gas.csv"},
+
+    # Empresas con BTC en tesorería
+    "MSTR": {"ticker": "MSTR", "filename": "mstr.csv"},
+    "GME": {"ticker": "GME", "filename": "gme.csv"},
+    "MARA": {"ticker": "MARA", "filename": "mara.csv"},
+    "NAKA": {"ticker": "NAKA", "filename": "naka.csv"},
+    "SMLR": {"ticker": "SMLR", "filename": "smlr.csv"},
 }
 
 
