@@ -7,7 +7,7 @@ from io import StringIO
 ROOT = os.path.dirname(os.path.abspath(__file__))
 
 btc_path = os.path.join(ROOT, "data", "btc.csv")
-output_path = os.path.join(ROOT, "data", "cpi_btc.csv")
+output_path = os.path.join(ROOT, "data_btc", "cpi_btc.csv")
 
 # ======================
 # LOAD CPI

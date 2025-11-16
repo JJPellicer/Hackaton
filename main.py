@@ -74,7 +74,7 @@ def main():
         if name == "BTC":
             continue  # no convertimos BTC a BTC
         asset_path = os.path.join("data", meta["filename"])
-        output_path = os.path.join("data", f"{name.lower()}_btc.csv")
+        output_path = os.path.join("data_btc", f"{name.lower()}_btc.csv")
         try:
             build_relative_price(asset_path, btc_path, output_path)
         except Exception as e:
@@ -82,7 +82,7 @@ def main():
 
     print("\n=== GRAFICANDO ===")
     for name in ["SP500", "GOLD"]:  # aquí eliges los que quieres visualizar
-        csv_path = os.path.join("data", f"{name.lower()}_btc.csv")
+        csv_path = os.path.join("data_btc", f"{name.lower()}_btc.csv")
         label = f"{name} en BTC"
         plot_relative(csv_path, label)
 

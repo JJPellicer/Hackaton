@@ -94,14 +94,14 @@ def plot_future_only(asset_name, future_df):
 if __name__ == "__main__":
     # Solo usa los archivos que tú ya tienes y sabes que funcionan
     assets = {
-    "gold": "data/gold_btc.csv",
-    "sp500": "data/sp500_btc.csv",
-    "oil": "data/oil_btc.csv",
-    "us100": "data/us100_btc.csv",
-    "cpi": "data/cpi_btc.csv",
-    "silver": "data/silver_btc.csv",
-    "copper": "data/copper_btc.csv",
-    "natgas": "data/natgas_btc.csv"
+    "gold": "data_btc/gold_btc.csv",
+    "sp500": "data_btc/sp500_btc.csv",
+    "oil": "data_btc/oil_btc.csv",
+    "us100": "data_btc/us100_btc.csv",
+    "cpi": "data_btc/cpi_btc.csv",
+    "silver": "data_btc/silver_btc.csv",
+    "copper": "data_btc/copper_btc.csv",
+    "natgas": "data_btc/natgas_btc.csv"
 }
 
 

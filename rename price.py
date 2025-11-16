@@ -2,8 +2,8 @@ import os
 import pandas as pd
 
 # Folder where your CSVs are stored
-input_folder = "data"
-output_folder = "data"
+input_folder = "data_btc"
+output_folder = "data_btc"
 
 os.makedirs(output_folder, exist_ok=True)
 
